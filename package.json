@@ -1,0 +1,19 @@
+{
+  "name": "protractorwrap",
+  "version": "1.0.2",
+  "description": "It is a wrapper over protractor in-built functions, that helps to structure the ui test automation.",
+  "author": "zmomin@cimpress.com",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "license": "Apache-2.0",
+  "main": "protractorwrap.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Cimpress-MCP/ProtractorWrap.git"
+  },
+  "dependencies": {
+    "protractor": "latest",
+    "request": "latest"
+  }
+}
