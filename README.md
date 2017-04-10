@@ -124,7 +124,7 @@ It is a wrapper over protractor in-built functions, that helps to structure the 
     Let us assume you have the config, service account credentials and application url in different json files.
     ```javascript
       Syntax:
-        pWrap.generateAuth0TokenAndAddToCookies(auth0Uri, auth0ClientId, serviceAccountUsername, ServiceAccountPassword, profile, connection, appUrl);
+        pWrap.bypassBrowserSpecificAuthenticationPopup(auth0Uri, auth0ClientId, serviceAccountUsername, ServiceAccountPassword, profile, connection, appUrl);
     ```
     ```json
     Config.json
@@ -164,11 +164,12 @@ It is a wrapper over protractor in-built functions, that helps to structure the 
     profile = pWrap.readFileWithKey(config, "Profile");
     auth0 = pWrap.readFileWithKey(config, "Auth0");
     connection = pWrap.readFileWithKey(config, "Connection");
-    pWrap.generateAuth0TokenAndAddToCookies(auth0.uri, auth0.clientId, credentials.ServiceAccountCredentials.username, credentials.ServiceAccountCredentials.password, profile, connection, urlFile.appUrl);
+    pWrap.bypassBrowserSpecificAuthenticationPopup(auth0.uri, auth0.clientId, credentials.ServiceAccountCredentials.username, credentials.ServiceAccountCredentials.password, profile, connection, urlFile.appUrl);
     pWrap.navigateToPage(urlFile.appUrl);
     ...
     ...
     ```
+    The method is specific to auth0 that is the method generates auth0 and stores the profile and auth0 token in the browser resulting in bypass of authentication pop-up.
 
 11. To **refresh** page.
     ```javascript
