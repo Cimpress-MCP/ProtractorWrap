@@ -1,6 +1,6 @@
 {
   "name": "protractorwrap",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "It is a wrapper over protractor in-built functions, that helps to structure the ui test automation.",
   "author": "zmomin@cimpress.com",
   "scripts": {
